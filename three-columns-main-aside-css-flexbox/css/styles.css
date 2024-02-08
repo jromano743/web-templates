@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.sidebar{
+    margin: 0;
+}
+
+@media (min-width: 768px){
+    .contenedor-flex{
+        display: flex;
+    }
+
+    .main-conteiner{
+        /*flex: 3;      El factor de crecimiento es 3*/
+        flex-basis: calc(60% - 1rem);
+    }
+
+    .sidebar{
+        /*flex: 1;      El factor de crecimiento es 1*/
+        flex-basis: calc(20% - 1rem);
+        margin-left: 1.5rem;
+    }
+}
