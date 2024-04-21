@@ -1,0 +1,52 @@
+#container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.rating_button {
+    display: none;
+}
+
+.rating_selector {
+    display: inline-block;
+
+    /* Ancho y largo del elemento*/
+    width: 50px;
+    height: 50px;
+
+    /* Imagen del elemento (carpeta assets)*/
+    background-image: url('./assets/star-icon-512.png');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+}
+
+.rating_selector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    /* Imagen del elemento (carpeta assets)*/
+    mask-image: url('./assets/star-icon-512.png');
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    transition: background-color 0.3s;
+}
+
+.rating_selector.selected::before, input[type="radio"]:checked + .rating_selector::before {
+    background-color: yellow;
+}
+
+.rating_selector:hover::before {
+    background-color: yellow;
+}
