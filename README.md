@@ -1,13 +1,12 @@
-## CSS Column Drop Design Patterns
+## Web templates
 
-This repository comprises a selection of CSS templates centered around column drop design patterns. It also features two projects based on column layouts: one with the main content in the aside and the other with three equal columns.
+This repository comprises a selection of codes to use in web developments. 
 
 ### Overview
 
-The CSS column drop design patterns showcased in this repository are crucial for building responsive layouts that seamlessly adjust to various screen sizes. Here, you'll find a range of templates demonstrating different column drop techniques, simplifying their implementation in your projects.
-
+We can find design patterns with CSS, functionalities or components with Js, etc.
 ### Features
 
-1. **Column Drop Patterns**: A diverse set of CSS templates exemplifying column drop design patterns.
-2. **Main-Aside Layout**: One project showcases a layout where the main content is in the aside.
-3. **Three Column Layout**: Another project illustrates a layout with three equal columns, useful for various content presentations.
+1. **Flexbox**: Collection of layouts created with flexbox
+2. **CSS Grid**: Collection of layouts created with css grid.
+3. **Components**: Collection of functionalities created with js, among others.
