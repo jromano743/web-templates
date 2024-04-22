@@ -43,7 +43,8 @@
     transition: background-color 0.3s;
 }
 
-.rating_selector.selected::before, input[type="radio"]:checked + .rating_selector::before {
+.c_rating .rating_selector.selected::before,
+.c_rating input[type="radio"]:checked + .rating_selector::before {
     background-color: yellow;
 }
 

@@ -1,18 +1,27 @@
-/**
- * Saves the value from 1-5 according to the selected star (no need to use the button)
- * Also modifies the classes according to the selected star number
- */
 $(document).ready(function() {
-    var selectedRating = null;
+    var selectedRatings = {};
+    var namesList = ['rating', 'rating2'];//Name en _inputs y botones submit_ de cada container
 
-    $("input[name='rating']").change(function() {
-        selectedRating = $(this).val();
-        $("label").removeClass("selected");
-        $(this).prevAll("input[name='rating']").next("label").addClass("selected");
-        $(this).nextAll("input[name='rating']").next("label").removeClass("selected");
+    namesList.forEach(element => {
+        selectedRatings[element] = null;
+
+        $("input[name='" + element + "']").change(function() {
+            var elementName = $(this).attr('name');
+            selectedRatings[elementName] = $(this).val();
+            $(this).siblings("label").removeClass("selected");
+            $(this).prevAll("input[name='" + elementName + "']").next("label").addClass("selected");
+            $(this).nextAll("input[name='" + elementName + "']").next("label").removeClass("selected");
+        });
+
     });
 
+    /* Botones submit, deben tener el mismo nombre de los inputs */
     $("#submitBtn").click(function() {
-        alert("Calification: " + selectedRating);
+        alert("Calification: " + selectedRatings[$(this).attr('name')]);
+    });
+
+    $("#submitBtn2").click(function() {
+        alert("Calification: " + selectedRatings[$(this).attr('name')]);
     });
 });
+
