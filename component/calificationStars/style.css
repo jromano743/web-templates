@@ -1,4 +1,4 @@
-#container {
+.rating_container {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -43,8 +43,8 @@
     transition: background-color 0.3s;
 }
 
-.c_rating .rating_selector.selected::before,
-.c_rating input[type="radio"]:checked + .rating_selector::before {
+.rating_container .rating_selector.selected::before,
+.rating_container input[type="radio"]:checked + .rating_selector::before {
     background-color: yellow;
 }
 
